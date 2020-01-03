@@ -1,8 +1,8 @@
 package com.ct7ct7ct7.androidvimeoplayer.view;
 
-import android.arch.lifecycle.Lifecycle;
-import android.arch.lifecycle.LifecycleObserver;
-import android.arch.lifecycle.OnLifecycleEvent;
+import androidx.lifecycle.Lifecycle;
+import androidx.lifecycle.LifecycleObserver;
+import androidx.lifecycle.OnLifecycleEvent;
 import android.content.Context;
 import android.content.res.ColorStateList;
 import android.content.res.TypedArray;

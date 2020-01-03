@@ -1,10 +1,10 @@
 package com.ct7ct7ct7.androidvimeoplayersample.examples
 
-import android.arch.lifecycle.Lifecycle
+import androidx.lifecycle.Lifecycle
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
-import android.support.v7.widget.LinearLayoutManager
-import android.support.v7.widget.RecyclerView
+import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -40,12 +40,12 @@ class RecyclerViewActivity : AppCompatActivity() {
         ids.add(19231868)
 
         val adapter = TestRecyclerViewAdapter(lifecycle, ids)
-        recyclerView.layoutManager = LinearLayoutManager(this@RecyclerViewActivity)
+        recyclerView.layoutManager = androidx.recyclerview.widget.LinearLayoutManager(this@RecyclerViewActivity)
         recyclerView.adapter = adapter
     }
 
 
-    private class TestRecyclerViewAdapter(val lifecycle: Lifecycle, val items: ArrayList<Int>) : RecyclerView.Adapter<TestRecyclerViewAdapter.ViewHolder>() {
+    private class TestRecyclerViewAdapter(val lifecycle: Lifecycle, val items: ArrayList<Int>) : androidx.recyclerview.widget.RecyclerView.Adapter<TestRecyclerViewAdapter.ViewHolder>() {
 
         override fun onBindViewHolder(holder: ViewHolder, position: Int) {
             var id = items[position]
@@ -62,7 +62,7 @@ class RecyclerViewActivity : AppCompatActivity() {
             return items.size
         }
 
-        class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+        class ViewHolder(view: View) : androidx.recyclerview.widget.RecyclerView.ViewHolder(view) {
             val vimeoPlayer = view.vimeoPlayer
         }
     }
